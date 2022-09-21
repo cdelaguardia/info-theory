@@ -19,7 +19,7 @@ p(16)=0.086;
 
 %calculado las probabilidades frontera %
 cum =0;
-
+pf = size(15);
 for k = 1:15
     cum = cum + p(k);
     pf(k)=cum;
@@ -27,6 +27,8 @@ end
 %////////////////////////////////////////////////
 
 % generando enteros del 0 al 15
+y = size(16);
+
 for j = 0 : 15
     y(j+1) = j; % y(j) va a sustituir a xj %
 end
@@ -37,44 +39,48 @@ end
 M=50;
 %//////////////////////////////////////////////
 
-
+x = size(M,1);
 for i = 1 : M
     u = rand(1,1);
     if u <= pf(1)
         x(i,1) = y(1);
-    elseif u > pf(1) & u <= pf(2)
+    elseif u > pf(1) && u <= pf(2)
         x(i,1) = y(2);
-    elseif u > pf(2) & u <= pf(3)
+    elseif u > pf(2) && u <= pf(3)
         x(i,1) = y(3);
-    elseif u > pf(3) & u <= pf(4)
+    elseif u > pf(3) && u <= pf(4)
         x(i,1) = y(4);
-    elseif u > pf(4) & u <= pf(5)
+    elseif u > pf(4) && u <= pf(5)
         x(i,1) = y(5);
-    elseif u > pf(5) & u <= pf(6)
+    elseif u > pf(5) && u <= pf(6)
         x(i,1) = y(6);
-    elseif u > pf(6) & u <= pf(7)
+    elseif u > pf(6) && u <= pf(7)
         x(i,1) = y(7);
-    elseif u > pf(7) & u <= pf(8)
+    elseif u > pf(7) && u <= pf(8)
         x(i,1) = y(8);
-    elseif u > pf(8) & u <= pf(9)
+    elseif u > pf(8) && u <= pf(9)
         x(i,1) = y(9);
-    elseif u > pf(9) & u <= pf(10)
+    elseif u > pf(9) && u <= pf(10)
         x(i,1) = y(10);
-    elseif u > pf(10) & u <= pf(11)
+    elseif u > pf(10) && u <= pf(11)
         x(i,1) = y(11);
-    elseif u > pf(11) & u <= pf(12)
+    elseif u > pf(11) && u <= pf(12)
         x(i,1) = y(12);
-    elseif u > pf(12) & u <= pf(13)
+    elseif u > pf(12) && u <= pf(13)
         x(i,1) = y(13);
-    elseif u > pf(13) & u <= pf(14)
+    elseif u > pf(13) && u <= pf(14)
         x(i,1) = y(14);
-    elseif u > pf(14) & u <= pf(15)
+    elseif u > pf(14) && u <= pf(15)
         x(i,1) = y(15);
     elseif u > pf(15)
         x(i,1) = y(16);
 
     end
 end
+
+
+
+
 
 
 
